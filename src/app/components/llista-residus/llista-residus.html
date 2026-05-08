@@ -1,0 +1,56 @@
+<div class="container">
+  <header class="capçalera">
+    <div class="logo">
+      <span class="logo-icon">♻</span>
+      <h1>EcoTrack</h1>
+    </div>
+    <p class="subtitol">Gestió de residus industrials</p>
+  </header>
+
+  <app-formulari-residu />
+
+  <div class="controls">
+    <button
+      class="btn-filtre"
+      [class.actiu]="!nomesOberts()"
+      (click)="nomesOberts.set(false)"
+    >
+      Tots ({{ service.tots().length }})
+    </button>
+    <button
+      class="btn-filtre"
+      [class.actiu]="nomesOberts()"
+      (click)="nomesOberts.set(true)"
+    >
+      Pendents ({{ service.pendents().length }})
+    </button>
+  </div>
+
+  <div class="taula">
+    @for (r of llista(); track r.id) {
+      <div class="card" [class.pendent]="r.estat === 'Pendent'">
+        <div class="card-cap">
+          <span class="nom">{{ r.nom }}</span>
+          <span class="badge" [class]="'badge ' + r.tipus.toLowerCase()">{{ r.tipus }}</span>
+        </div>
+        <div class="detalls">
+          <span class="detall">⚖ {{ r.pes }} kg</span>
+          <span class="detall">📅 {{ r.data }}</span>
+          <span class="estat" [class.processat]="r.estat === 'Processat'">{{ r.estat }}</span>
+        </div>
+        <div class="accions">
+          @if (r.estat === 'Pendent') {
+            <button class="btn-accio processar" (click)="service.actualitzarEstat(r.id, 'Processat')">✔ Processar</button>
+          } @else {
+            <button class="btn-accio revertir" (click)="service.actualitzarEstat(r.id, 'Pendent')">↩ Revertir</button>
+          }
+          <button class="btn-accio eliminar" (click)="service.eliminar(r.id)">🗑 Eliminar</button>
+        </div>
+      </div>
+    } @empty {
+      <div class="buit">
+        <span>No hi ha residus per mostrar.</span>
+      </div>
+    }
+  </div>
+</div>

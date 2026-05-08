@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="enviar()" class="formulari">
+  <h2>Afegir residu</h2>
+
+  <div class="camps">
+    <div class="camp">
+      <label for="nom">Nom del residu</label>
+      <input id="nom" type="text" formControlName="nom" placeholder="Ex: Bateries de plom" />
+      @if (form.controls.nom.invalid && form.controls.nom.touched) {
+        <span class="error">El nom és obligatori (mínim 2 caràcters).</span>
+      }
+    </div>
+
+    <div class="camp">
+      <label for="tipus">Tipus</label>
+      <select id="tipus" formControlName="tipus">
+        <option value="Perillós">Perillós</option>
+        <option value="Reciclable">Reciclable</option>
+        <option value="Especial">Especial</option>
+      </select>
+    </div>
+
+    <div class="camp">
+      <label for="pes">Pes (kg)</label>
+      <input id="pes" type="number" formControlName="pes" placeholder="0.0" step="0.1" min="0.1" />
+      @if (form.controls.pes.invalid && form.controls.pes.touched) {
+        <span class="error">El pes ha de ser superior a 0.</span>
+      }
+    </div>
+
+    <div class="camp">
+      <label for="data">Data</label>
+      <input id="data" type="date" formControlName="data" />
+    </div>
+
+    <div class="camp">
+      <label for="estat">Estat</label>
+      <select id="estat" formControlName="estat">
+        <option value="Pendent">Pendent</option>
+        <option value="Processat">Processat</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn-afegir" [disabled]="form.invalid">+ Afegir residu</button>
+</form>

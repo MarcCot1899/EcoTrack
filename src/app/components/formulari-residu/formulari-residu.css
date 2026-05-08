@@ -1,0 +1,79 @@
+.formulari {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(45, 106, 79, 0.1);
+  margin-bottom: 2rem;
+}
+
+.formulari h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  color: #2d6a4f;
+  font-weight: 600;
+}
+
+.camps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.camp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.camp label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #52b788;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.camp input,
+.camp select {
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid #b7e4c7;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1b4332;
+  background: #f0faf4;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.camp input:focus,
+.camp select:focus {
+  border-color: #52b788;
+  background: #fff;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #e63946;
+}
+
+.btn-afegir {
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-afegir:hover:not(:disabled) {
+  background: #1b4332;
+}
+
+.btn-afegir:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,196 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.capçalera {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1b4332;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.subtitol {
+  color: #52b788;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-filtre {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid #b7e4c7;
+  background: #fff;
+  color: #2d6a4f;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filtre:hover {
+  border-color: #52b788;
+  background: #f0faf4;
+}
+
+.btn-filtre.actiu {
+  background: #2d6a4f;
+  border-color: #2d6a4f;
+  color: #fff;
+}
+
+.taula {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.08);
+  border-left: 4px solid #b7e4c7;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(45, 106, 79, 0.15);
+}
+
+.card.pendent {
+  border-left-color: #f4a261;
+}
+
+.card-cap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.nom {
+  font-weight: 700;
+  color: #1b4332;
+  font-size: 1rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge.perillós {
+  background: #ffe0e3;
+  color: #c1121f;
+}
+
+.badge.reciclable {
+  background: #d8f3dc;
+  color: #1b4332;
+}
+
+.badge.especial {
+  background: #fdebd0;
+  color: #a0522d;
+}
+
+.detalls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.detall {
+  font-size: 0.85rem;
+  color: #52b788;
+}
+
+.estat {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f4a261;
+  background: #fff3e4;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+.estat.processat {
+  color: #2d6a4f;
+  background: #d8f3dc;
+}
+
+.accions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-accio {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-accio:hover {
+  opacity: 0.85;
+}
+
+.btn-accio.processar {
+  background: #2d6a4f;
+  color: #fff;
+}
+
+.btn-accio.revertir {
+  background: #95d5b2;
+  color: #1b4332;
+}
+
+.btn-accio.eliminar {
+  background: #ffe0e3;
+  color: #c1121f;
+}
+
+.buit {
+  text-align: center;
+  padding: 3rem;
+  color: #95d5b2;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 12px;
+}
